@@ -17,12 +17,25 @@ public class Ferragnez {
         // Inizializzo una variabile booleana che tiene traccia se il nome/cognome è tra la lista partecipanti
         boolean found = false;
 
-        for (int i = 0; i < attendees.length; i++) {
+//        // CICLO FOR
+//        for (int i = 0; i < attendees.length; i++) {
+//            if (yourNameSurname.equals(attendees[i])) {
+//                // se il valore alla posizione corrente è uguale al nome/cognome dell'utente cambio il valore di found
+//                found = true;
+//                break;
+//            }
+//        }
+
+        // CICLO WHILE
+        int i = 0;      // Setto valore partenza di i uguale a 0
+
+        while (i < attendees.length) {
             if (yourNameSurname.equals(attendees[i])) {
                 // se il valore alla posizione corrente è uguale al nome/cognome dell'utente cambio il valore di found
                 found = true;
                 break;
             }
+            i++;       // Incremento valore di i per evitare loop
         }
 
         // Se found è true
